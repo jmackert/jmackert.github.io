@@ -6,6 +6,18 @@
     font-family: sans-serif;
 }
 
+html{
+    font-size: 16px;
+    margin-top: 3rem;
+}
+
+header,
+main,
+footer{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
 nav{
     position: fixed;
     top: 0;
@@ -16,7 +28,6 @@ nav{
     flex-flow: row;
     justify-content: center;
     flex-wrap: wrap;
-
     background: #333;
 }
 
@@ -28,4 +39,28 @@ nav a{
 
 nav a:hover{
     background:#777;
+}
+
+header{
+    padding: 2rem 0;
+}
+
+section{
+    margin: 1rem 0;
+    padding-top: 3rem;
+    min-height: 20rem;
+}
+
+section > p{
+    margin: 1em,0;
+}
+
+#projects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+footer{
+    background: #333;
+    padding: 0.5rem 2rem;
 }
