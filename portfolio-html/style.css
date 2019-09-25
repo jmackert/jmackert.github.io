@@ -11,6 +11,12 @@ html{
     margin-top: 3rem;
 }
 
+main img{
+    width: 275px;
+    height: 250px;
+    border: 1px solid black;
+}
+
 header,
 main,
 footer{
@@ -39,6 +45,7 @@ nav a{
 
 nav a:hover{
     background:#777;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 header{
@@ -48,7 +55,7 @@ header{
 section{
     margin: 1rem 0;
     padding-top: 3rem;
-    min-height: 20rem;
+    min-height: 15rem;
 }
 
 section > p{
@@ -58,6 +65,23 @@ section > p{
 #projects{
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 1em;
+}
+
+#projects article{
+    background: #ccc;
+    padding: 1rem;
+}
+
+#projects article img{
+    width: 100%;
+    border: 1px solid black;
+    transition: transform .2s;
+}
+
+#projects article img:hover{
+    transform: scale(2);
 }
 
 footer{
