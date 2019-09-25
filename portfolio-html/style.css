@@ -9,19 +9,47 @@
 html{
     font-size: 16px;
     margin-top: 3rem;
+    --eerie-black: #161925;
+    --japanese-indigo: #23395B;
+    --queen-blue: #406E8E;
+    --pewter-blue: #8EA8C3;
+    --aero-blue: #CBF7ED;
 }
 
-main img{
+#photoOfMe{
     width: 275px;
     height: 250px;
-    border: 1px solid black;
+    border: 1px solid var(--eerie-black);
+    margin: 0 2rem;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#aboutMe p{
+    padding: 1rem 1rem;
+}
+
+#contactInformation li{
+    display:flex;
+    margin: 1.5rem auto;
+    justify-content: center;
 }
 
 header,
 main,
 footer{
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 950px;
+    background-color: var(--pewter-blue)
+
+}
+
+h2{
+    background-color: var(--japanese-indigo);
+    color:rgb(233, 233, 233);
+    display:flex;
+    justify-content: center;
 }
 
 nav{
@@ -34,7 +62,7 @@ nav{
     flex-flow: row;
     justify-content: center;
     flex-wrap: wrap;
-    background: #333;
+    background-color: var(--japanese-indigo);
 }
 
 nav a{
@@ -44,7 +72,7 @@ nav a{
 }
 
 nav a:hover{
-    background:#777;
+    background-color: var(--queen-blue);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
@@ -52,8 +80,16 @@ header{
     padding: 2rem 0;
 }
 
+header h1{
+    margin: auto 2rem;
+    background-color: var(--japanese-indigo);
+    color:rgb(233, 233, 233);
+    display:flex;
+    justify-content: center;
+}
+
 section{
-    margin: 1rem 0;
+    margin: 1rem 2rem;
     padding-top: 3rem;
     min-height: 15rem;
 }
@@ -69,6 +105,10 @@ section > p{
     grid-column-gap: 1em;
 }
 
+div h2{
+    margin: 0 2rem;
+}
+
 #projects article{
     background: #ccc;
     padding: 1rem;
@@ -76,7 +116,7 @@ section > p{
 
 #projects article img{
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid var(--eerie-black);
     transition: transform .2s;
 }
 
@@ -85,6 +125,6 @@ section > p{
 }
 
 footer{
-    background: #333;
-    padding: 0.5rem 2rem;
+    background-color: var(--japanese-indigo);
+    padding: 1rem 1rem;
 }
