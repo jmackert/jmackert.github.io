@@ -17,7 +17,7 @@ html{
 }
 
 #photoOfMe{
-    width: 275px;
+    width: 200px;
     height: 250px;
     border: 1px solid var(--eerie-black);
     margin: 0 2rem;
