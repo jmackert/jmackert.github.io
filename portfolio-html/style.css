@@ -131,6 +131,7 @@ footer{
 
 /*Image Carousel Start*/
 
+
 #carouselFrame{
     border: 1px solid var(--eerie-black);
     border-radius: 3px;
@@ -145,24 +146,20 @@ footer{
     height: 15rem;
 }
 
-#carouselFrame[data-src] {
+#carouselFrame [data-src] {
     display: none;
 }
 
 #carouselCaption{
     margin-top: 5px;
     border-radius: 3px;
-    border: 1px solid #ccc;
+    background-color: var(--japanese-indigo);
     padding: 0.2em 0.5em;
-    font-size: 0.8em;
+    font-size: 1rem;
     text-align: center;
     transition: 0.5s;
+    color:rgb(233, 233, 233);
 }
-
-#carouselCaption.flash {
-    transition: 0s;
-    background: #ccc;
-  }
 
 
 /*Image Carousel End*/

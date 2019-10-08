@@ -28,10 +28,8 @@
             let {imageUrl,caption} = carouselSlides[carouselIndex];
             carouselFrame.style.backgroundImage = `url('${imageUrl}')`;
             let count = `(${carouselIndex+1}/${carouselSlides.length})`;
-            carouselCaption.innerHTML = count + caption;
-            carouselCaption.classList.add("flash");
+            carouselCaption.innerHTML = caption;
             setTimeout(() => {
-                carouselCaption.classList.remove("flash");
             }, 0);
         }
 
@@ -45,7 +43,7 @@
 
         setInterval(function() {
             displayNextCarouselImage();
-        }, 4000);
+        }, 3000);
     }
 
 })();
