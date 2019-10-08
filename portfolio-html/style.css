@@ -128,3 +128,41 @@ footer{
     background-color: var(--japanese-indigo);
     padding: 1rem 1rem;
 }
+
+/*Image Carousel Start*/
+
+#carouselFrame{
+    border: 1px solid var(--eerie-black);
+    border-radius: 3px;
+    position: relative;
+}
+
+#carouselFrame{
+    background: #ccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    height: 15rem;
+}
+
+#carouselFrame[data-src] {
+    display: none;
+}
+
+#carouselCaption{
+    margin-top: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#carouselCaption.flash {
+    transition: 0s;
+    background: #ccc;
+  }
+
+
+/*Image Carousel End*/
