@@ -76,11 +76,11 @@ section > p{
 }
 
 section a{
-    color:rgb(233, 233, 233);
+    color:var(--eerie-black);
 }
 
 section a:hover{
-    color: var(--aero-blue);
+    color:rgb(233, 233, 233);
 }
 
 #projects{
@@ -184,6 +184,14 @@ footer{
     
 }
 
+.content a{
+    color:rgb(233, 233, 233);
+}
+
+.content a:hover{
+    color: var(--aero-blue);
+}
+
 /*Collapsible project info End */
 
 /*Nav bar start*/
@@ -231,5 +239,76 @@ footer{
     background-color: var(--queen-blue);
 }
 
+/*Nav bar Finish*/
 
-/*Nav bar finish*/
+/*Modal Starts*/
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+  
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-open #backdrop {
+    display: flex;
+  }
+  
+  #modal {
+    width: 80vw;
+    height: 80vh;
+    background: var(--pewter-blue);
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px #333;
+  }
+  
+  #modal h2 {
+    margin: auto 2rem;
+    color:var(--eerie-black);
+    display:flex;
+    justify-content: center;
+    background: none;
+  }
+  
+  #modal button {
+    float: right;
+  
+    background: var(--japanese-indigo);
+    color:rgb(233, 233, 233);
+
+    padding: 0.5rem 2rem;
+    border: 0;
+    border-radius: 3px;
+  
+    cursor: pointer;
+  }
+  
+  #modal button:hover {
+    color:rgb(233, 233, 233);
+    background: var(--queen-blue);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+  }
+  
+  #modal #modal-content {
+    color:var(--eerie-black);
+    margin: 1rem 2rem;
+    padding-top: 3rem;
+    min-height: 15rem;
+  }
+ 
+  span.live {
+    cursor: pointer;
+  }
+  span.live:hover {
+    color:rgb(233, 233, 233);
+  }
+
+/*Modal Finish*/

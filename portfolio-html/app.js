@@ -3,6 +3,7 @@
     addImageCarousel();
     addProjectCollapsible();
     addNavCollapsible();
+    addModal();
 
 
     // Image Carousel Start
@@ -90,8 +91,31 @@
         }
     }
 
-
-
     //Collapsible Nav Menu End
+
+
+
+    //Modal Start
+
+    function addModal() {
+
+        const modalTriggerElement = document.querySelector('#modal-trigger');
+
+        const modalTriggerClickHandler = function() {
+            document.body.classList.add('modal-open');
+        };
+
+        modalTriggerElement.addEventListener('click', modalTriggerClickHandler);
+
+        const modalCloseButton = document.querySelector('#modal button');
+
+        const modalCloseButtonClickHandler = function() {
+            document.body.classList.remove('modal-open');
+        };
+
+        modalCloseButton.addEventListener('click', modalCloseButtonClickHandler);
+    }
+
+    //Modal End
 
 })();
