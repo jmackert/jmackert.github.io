@@ -1,9 +1,12 @@
 (function() {
 
     addImageCarousel();
-    addCollapsible();
+    addProjectCollapsible();
+    addNavCollapsible();
 
-    // Image Carousel
+
+    // Image Carousel Start
+
     function addImageCarousel(){
 
         const carouselFrame = document.getElementById("carouselFrame");
@@ -43,16 +46,18 @@
         }, 3000);
     }
 
+    //Image Carousel End
  
-    //Collapsible
-    function addCollapsible(){
-        var collapsible = document.getElementsByClassName("collapsible");
+    //Collapsible Project Info Start
+
+    function addProjectCollapsible(){
+        const collapsible = document.getElementsByClassName("collapsible");
         var i;
 
         for(i=0; i < collapsible.length; i++){
             collapsible[i].addEventListener("click", function(){
                 this.classList.toggle("active");
-                var content = this.nextElementSibling;
+                const content = this.nextElementSibling;
                 if(content.style.maxHeight){
                     content.style.maxHeight = null;
                 }
@@ -62,5 +67,31 @@
             });
         }
     }
+
+    //Collapsible Project Info End
+
+    //Collapsible Nav Menu Start
+
+    function addNavCollapsible(){
+        const navCollapsibleButton = document.getElementsByClassName("navCollapsibleButton");
+        var i;
+
+        for(i=0; i < navCollapsibleButton.length; i++){
+            navCollapsibleButton[i].addEventListener("click", function(){
+                this.classList.toggle("active");
+                const navContent = this.nextElementSibling;
+                if(navContent.style.maxHeight){
+                    navContent.style.maxHeight = null;
+                }
+                else{
+                    navContent.style.maxHeight = navContent.scrollHeight + "px";
+                }
+            });
+        }
+    }
+
+
+
+    //Collapsible Nav Menu End
 
 })();
